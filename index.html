@@ -173,23 +173,33 @@
   <section class="container my-5" id="projects">
     <h2>Projects</h2>
     <div class="row">
-      <div class="col-md-4">
-        <h3>Framework Migration of Robotic System from ROS1 to ROS2</h3>
-        <p>In March 2022, I embarked on a project to migrate a hobby robot's framework from ROS1 Melodic to ROS2 Humble. My first step was to create a custom URDF file to accurately represent the robot's structure and dimensions. Subsequently, I gained foundational knowledge in ROS1 and applied it to transition the system to ROS2. For motion planning, I utilized MoveIt, and for visualization and goal-setting, I used RViz.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Digital twin in ROS1</h3>
-        <p>In a separate project, I created a digital twin of a UR5 robot using ROS1 Noetic. The real-world robot and its simulation in Gazebo were both equipped with 8 LiDAR sensors. The simulation ran in real-time, synchronized through RTDE (Real-Time Data Exchange). Through a series of tests, we evaluated and compared sensor readings in both the simulated and real-world environments.</p>
-        <img src="DD_sim.png" alt="Robot in simulation." class="full-width">
-      </div>
-    
-      <div class="col-md-4">
-        <h3>Master thesis</h3>
-        <p>In my master's thesis, I integrated two cameras on an autonomous robot and developed an obstacle detection algorithm. The goal was optimal camera positioning and efficient environmental perception. After market analysis and literature review, a model was created to study camera placements. The Intel RealSense D435f stereo cameras captured the environment, and the architecture relied on ROS and Python. Open3d processed the data, with RViz for visualization. A GPU-based method sped up plane detection. The optimized obstacle detection algorithm was tested on the robot, assessing factors like distance deviation, detection resolution, and repeatability. Tests included different materials and dynamic obstacle detection. The study concludes by addressing challenges like glare, airborne obstacle detection, camera positioning, and potential enhancements.
-
-      </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3>Framework Migration of Robotic System from ROS1 to ROS2</h3>
+                    <p>In March 2022, I embarked on a project to migrate a hobby robot's framework from ROS1 Melodic to ROS2 Humble. My first step was to create a custom URDF file to accurately represent the robot's structure and dimensions. Subsequently, I gained foundational knowledge in ROS1 and applied it to transition the system to ROS2. For motion planning, I utilized MoveIt, and for visualization and goal-setting, I used RViz.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3>Digital twin in ROS1</h3>
+                    <p>In a separate project, I created a digital twin of a UR5 robot using ROS1 Noetic. The real-world robot and its simulation in Gazebo were both equipped with 8 LiDAR sensors. The simulation ran in real-time, synchronized through RTDE (Real-Time Data Exchange). Through a series of tests, we evaluated and compared sensor readings in both the simulated and real-world environments.</p>
+                    <!--<img src="DD_sim.png" alt="Robot in simulation." class="full-width">-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3>Master thesis</h3>
+                    <p>In my master's thesis, I integrated two cameras on an autonomous robot and developed an obstacle detection algorithm. The goal was optimal camera positioning and efficient environmental perception. After market analysis and literature review, a model was created to study camera placements. The Intel RealSense D435f stereo cameras captured the environment, and the architecture relied on ROS and Python. Open3d processed the data, with RViz for visualization. A GPU-based method sped up plane detection. The optimized obstacle detection algorithm was tested on the robot, assessing factors like distance deviation, detection resolution, and repeatability. Tests included different materials and dynamic obstacle detection. The study concludes by addressing challenges like glare, airborne obstacle detection, camera positioning, and potential enhancements.
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
   <footer class="container my-5">
     <p>&copy; 2023 Lenart Lavrih. All rights reserved.</p>
