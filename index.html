@@ -46,16 +46,6 @@
     background-color: rgb(26, 26, 26); /* Change to your desired color */
     color: #F5F5F5; /* Change to your desired color */
     }
-    .info-section {
-        margin-bottom: 20px;
-    }
-    .info-title {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-    .info-content {
-        margin-left: 10px;
-    }
     footer {
     background-color: rgb(26, 26, 26); /* dark gray */
     color: #F5F5F5;
@@ -103,36 +93,27 @@
 
 
   <section class="container my-5" id="info">
-    <img src="my_portrait.jpg" alt="Hello world." class="img-thumbnail" style="width: 5cm; float: right;">
-
-    <h2>Basic Information</h2>
-
-    <div class="info-section">
-        <div class="info-title">Name</div>
-        <div class="info-content">Lenart Lavrih</div>
-    </div>
-
-    <div class="info-section">
-        <div class="info-title">Email</div>
-        <div class="info-content"><a href="mailto:lenart@lavrih.com">lenart@lavrih.com</a></div>
-    </div>
-
-    <div class="info-section">
-        <div class="info-title">Summary</div>
-        <div class="info-content">
-            <p>My studies are focused on robotics, computer vision, and programming. While working, I learned about the ROS open-source project and implemented it on a robot that we built together with the student group. I dealt with the physical description of the robot, kinematics, and path planning, etc. My recent studies are centered on computer vision and autonomous robotics. I have experience with the Linux operating system, UNIX terminal, and Visual Studio Code combined with Git.</p>
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="my_portrait.jpg" alt="Hello world." class="card-img" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">Basic Information</h2>
+                    <h3>Name</h3>
+                    <p>Lenart Lavrih</p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:lenart@lavrih.com">lenart@lavrih.com</a></p>
+                    <p>My studies are focused on robotics, computer vision, and programming. While working, I learned about the ROS open-source project and implemented it on a robot that we built together with the student group. I dealt with the physical description of the robot, kinematics, and path planning, etc. My recent studies are centered on computer vision and autonomous robotics. I have experience with the Linux operating system, UNIX terminal, and Visual Studio Code combined with Git.</p>
+                    <h3>Education</h3>
+                    <p>University of Ljubljana, Faculty of Electrical Engineering</p>
+                    <p>Bachelor’s degree, 2018 - 2021</p>
+                    <p>Master’s degree, 2021 - 2023</p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="info-section">
-        <div class="info-title">Education</div>
-        <div class="info-content">
-            <p>University of Ljubljana, Faculty of Electrical Engineering</p>
-            <p>Bachelor’s degree, 2018 - 2021</p>
-            <p>Master’s degree, 2021 - 2023</p>
-        </div>
-    </div>
-
 </section>
 
   <section class="container my-5" id="skills">
