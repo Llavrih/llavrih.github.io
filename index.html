@@ -59,6 +59,35 @@
     background-color: rgb(26, 26, 26); /* Change to your desired color */
     color: #F5F5F5; /* Change to your desired color */
     }
+    .timeline {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .timeline-icon {
+        width: 20px;
+        height: 20px;
+        background-color: #616161;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .timeline-content {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    .timeline-content.right {
+        float: right;
+    }
     footer {
     background-color: rgb(26, 26, 26); /* dark gray */
     color: #F5F5F5;
@@ -204,22 +233,38 @@
                 <div class="card-body">
                     <h2 class="card-title">Work History</h2>
                     
-                    <h3>RLS Merilna tehnika d. o. o.</h3>
-                    <p><strong>Students work</strong></p>
-                    <p>Developing ROS2 framework for custom robot.</p>
-                    <p>Jun 2021 - Oct 2022</p>
-                    
-                    <!-- Oct 2022 - Sep 2023 -->
-                    <h3>IHS Systems</h3>
-                    <p><strong>Internship</strong></p>
-                    <p>Computer vision for Autonomous robot.</p>
-                    <p>Oct 2022 - Sep 2023</p>
-                    
-                    <!-- Oct 2023 - Dec 2023 -->
-                    <h3>IHS Systems</h3>
-                    <p><strong>ROS developer</strong></p>
-                    <p>ROS developer for Autonomous robot.</p>
-                    <p>Oct 2023 - Dec 2023</p>
+                    <div class="timeline">
+                      <!-- Prvo delovno mesto -->
+                      <div class="timeline-item">
+                          <div class="timeline-icon"></div>
+                          <div class="timeline-content">
+                              <p><strong>RLS Merilna tehnika d. o. o.</strong></p>
+                              <p>Students work</p>
+                              <p>Developing ROS2 framework for custom robot.</p>
+                              <p>Jun 2021 - Oct 2022</p>
+                          </div>
+                      </div>
+                      <!-- Drugo delovno mesto -->
+                      <div class="timeline-item">
+                          <div class="timeline-icon"></div>
+                          <div class="timeline-content right">
+                              <p><strong>IHS Systems</strong></p>
+                              <p>Internship</p>
+                              <p>Computer vision for Autonomous robot.</p>
+                              <p>Oct 2022 - Sep 2023</p>
+                          </div>
+                      </div>
+                      <!-- Tretje delovno mesto -->
+                      <div class="timeline-item">
+                          <div class="timeline-icon"></div>
+                          <div class="timeline-content">
+                              <p><strong>IHS Systems</strong></p>
+                              <p>ROS developer</p>
+                              <p>ROS developer for Autonomous robot.</p>
+                              <p>Oct 2023 - Dec 2023</p>
+                          </div>
+                      </div>
+                  </div>
                     
                 </div>
             </div>
