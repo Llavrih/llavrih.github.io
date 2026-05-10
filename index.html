@@ -1,108 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-iBB6mRfM14Imx11Bje7SS02F9jkRbYWB6BHzgEocSJkNXbbpTj/9opejX5RVcdZP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha384-iBB6mRfM14Imx11Bje7SS02F9jkRbYWB6BHzgEocSJkNXbbpTj/9opejX5RVcdZP" crossorigin="anonymous">
   <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
 </head>
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: rgb(37, 37, 37);
-      color: #F5F5F5; /* This is a smoky white color */
-    }
+<style>
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: rgb(37, 37, 37);
+    color: #F5F5F5;
+    /* This is a smoky white color */
+  }
 
-    h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     color: #d4d4d4;
-    }
+  }
 
-    h1 {
-        font-weight: 700; /* Bolder */
-    }
+  h1 {
+    font-weight: 700;
+    /* Bolder */
+  }
 
-    h2 {
-        font-weight: 600; /* Middle */
-    }
+  h2 {
+    font-weight: 600;
+    /* Middle */
+  }
 
-    h3 {
-        font-weight: 400; /* Lighter */
-    }
-    #info img {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      margin-left: 1rem;
-    }
-    .full-width {
+  h3 {
+    font-weight: 400;
+    /* Lighter */
+  }
+
+  #info img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 1rem;
+  }
+
+  .full-width {
     width: 100%;
     height: auto;
-    }
-    nav {
-      margin-bottom: 2rem;
-      
-    }
-    .navbar {
+  }
+
+  nav {
+    margin-bottom: 2rem;
+
+  }
+
+  .navbar {
     background-color: rgb(26, 26, 26) !important;
-    }
-    .nav-item a {
-    color: #F5F5F5 !important;  /* Change #FF0000 to your desired font color */
-    }
-    .navbar-brand {
-        color: #F5F5F5 !important;  /* Change #FF0000 to your desired font color */
-    }
-    .navbar-nav .nav-link:hover {
-        background-color: rgba(190, 190, 190, 0.329);  /* Change this value to your desired shade color */
-    }
-    .custom-card {
-    background-color: rgb(26, 26, 26); /* Change to your desired color */
-    color: #F5F5F5; /* Change to your desired color */
-    }
-    footer {
-    background-color: rgb(26, 26, 26); /* dark gray */
+  }
+
+  .nav-item a {
+    color: #F5F5F5 !important;
+    /* Change #FF0000 to your desired font color */
+  }
+
+  .navbar-brand {
+    color: #F5F5F5 !important;
+    /* Change #FF0000 to your desired font color */
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: rgba(190, 190, 190, 0.329);
+    /* Change this value to your desired shade color */
+  }
+
+  .custom-card {
+    background-color: rgb(26, 26, 26);
+    /* Change to your desired color */
+    color: #F5F5F5;
+    /* Change to your desired color */
+  }
+
+  footer {
+    background-color: rgb(26, 26, 26);
+    /* dark gray */
     color: #F5F5F5;
     text-align: center;
     padding: 2rem 0;
-    }
-  </style>
+  }
+</style>
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#info">Information</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#work-history">Work History</a>
-                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ms-auto">  <!-- ms-auto will move this ul to the right -->
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/Llavrih" target="_blank">
-                        <i class="fab fa-github fa-2x"></i>  <!-- Change fa-lg to fa-2x, fa-3x, etc., for larger sizes -->
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/lenart-lavrih-05b93019b" target="_blank">
-                        <i class="fab fa-linkedin fa-2x"></i>  <!-- Change fa-lg to fa-2x, fa-3x, etc., for larger sizes -->
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#info">Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work-history">Work History</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto will move this ul to the right -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Llavrih" target="_blank">
+              <i class="fab fa-github fa-2x"></i> <!-- Change fa-lg to fa-2x, fa-3x, etc., for larger sizes -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/lenart-lavrih-05b93019b" target="_blank">
+              <i class="fab fa-linkedin fa-2x"></i> <!-- Change fa-lg to fa-2x, fa-3x, etc., for larger sizes -->
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -110,27 +132,32 @@
 
   <section class="container my-5" id="info">
     <div class="card custom-card">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <video id="myVideo" class="card-img" style="width: 100%; height: 100%; object-fit: contain;" onclick="playPause();" controls muted loop>
-                  <source src="my_video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-              </video>
-          </div>
-          <div class="col-md-8">
-              <div class="card-body">
-                  <h2 class="card-title">About me</h2>
-                    <p> I'm Lenart Lavrih, originally from Slovenia and currently residing in Arnhem, Netherlands. My professional expertise lies in robotics, computer vision, programming, and digital twin technology. Alongside my technical career, I have a strong passion for physical activities and enjoy engaging in endurance sports (2024 I finished my first marathon and 2025 a full Ironman). These pursuits offer a refreshing balance to my technologically oriented work.</p>
-                    <h2>Education</h2>
-                    <p>University of Ljubljana, Faculty of Electrical Engineering</p>
-                    <p>Bachelor’s degree, 2018 - 2021</p>
-                    <p>Master’s degree, 2021 - 2023</p>
-                    <h2>Contact</h2>
-                    <p><a href="mailto:lenart@lavrih.com" style="color: #F5F5F5;">lenart@lavrih.com</a></p>
-          
-                </div>
-            </div>
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <video id="myVideo" class="card-img" style="width: 100%; height: 100%; object-fit: contain;"
+            onclick="playPause();" controls muted loop>
+            <source src="my_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">About me</h2>
+            <p> I'm Lenart Lavrih, originally from Slovenia and currently residing in Arnhem, Netherlands. My
+              professional expertise lies in robotics, computer vision, programming, and digital twin technology.
+              Alongside my technical career, I have a strong passion for physical activities and enjoy engaging in
+              endurance sports (2024 I finished my first marathon and 2025 a full Ironman). These pursuits offer a
+              refreshing balance to my technologically oriented work.</p>
+            <h2>Education</h2>
+            <p>University of Ljubljana, Faculty of Electrical Engineering</p>
+            <p>Bachelor’s degree, 2018 - 2021</p>
+            <p>Master’s degree, 2021 - 2023</p>
+            <h2>Contact</h2>
+            <p><a href="mailto:lenart@lavrih.com" style="color: #F5F5F5;">lenart@lavrih.com</a></p>
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -142,31 +169,38 @@
         <ul>
           <li>Python</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>C++</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="2" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>ROS1</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="5" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>ROS2</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="3" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>Matlab</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>TIA PORTAL</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="3" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>RobotStudio</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
         </ul>
       </div>
@@ -175,15 +209,18 @@
         <ul>
           <li>Linux</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>MacOS</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="3" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>Windows</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
         </ul>
       </div>
@@ -192,23 +229,28 @@
         <ul>
           <li>Visualisation (matplotlib, RViZ, OpenCV)</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>Simulation (Gazebo, Simulink)</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>Point Cloud processing (Open3D, numpy)</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>Git</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="5" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
           <li>Office</li>
           <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"></div>
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0"
+              aria-valuemax="5"></div>
           </div>
         </ul>
       </div>
@@ -217,89 +259,109 @@
 
   <section class="container my-5" id="work-history">
     <div class="card custom-card">
-        <div class="row no-gutters">
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h2 class="card-title">Work History</h2>
-                    
-                    <p><strong>RLS Merilna tehnika d. o. o.</strong></p>
-                    <p>Developing ROS2 framework for custom robot.</p>
-                    <p>Jun 2021 - Oct 2022 (Approx. 16 months)</p>
-                    
-                    <p><strong>IHS Systems</strong></p>  
-                    <p>ROS developer for Autonomous robot.</p>
-                    <p>Oct 2022 - Dec 2023 (Approx. 14 months)</p>
+      <div class="row no-gutters">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">Work History</h2>
 
-                    <p><strong>Royal Kaak</strong></p>  
-                    <p>Robotics Engineer.</p>
-                    <p>Apr 2024 - current </p>
-                </div>
-            </div>
+            <p><strong>RLS Merilna tehnika d. o. o.</strong></p>
+            <p>Developing ROS2 framework for custom robot.</p>
+            <p>Jun 2021 - Oct 2022 (Approx. 16 months)</p>
+
+            <p><strong>IHS Systems</strong></p>
+            <p>ROS developer for Autonomous robot.</p>
+            <p>Oct 2022 - Dec 2023 (Approx. 14 months)</p>
+
+            <p><strong>Royal Kaak</strong></p>
+            <p>Robotics Engineer.</p>
+            <p>Apr 2024 - current </p>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
+  <!--
 <section class="container my-5" id="projects">
   <h2>Projects</h2>
   <div class="row">
       <div class="col-md-4">
-          <div class="card h-100 custom-card"> <!-- Apply your custom class here -->
-              <div class="card-body">
-                  <h3>Framework Migration of Robotic System from ROS1 to ROS2</h3>
-                  <p>In March 2022, I embarked on a project to migrate a hobby robot's framework from ROS1 Melodic to ROS2 Humble. My first step was to create a custom URDF file to accurately represent the robot's structure and dimensions. Subsequently, I gained foundational knowledge in ROS1 and applied it to transition the system to ROS2. For motion planning, I utilized MoveIt, and for visualization and goal-setting, I used RViz.</p>
-                </div>
-                <img src="ros_bot.jpg" alt="ROS bot)." class="full-width">
-          </div>
-      </div>
-      <div class="col-md-4">
-          <div class="card h-100 custom-card"> <!-- And here -->
-              <div class="card-body">
-                  <h3>Digital twin in ROS1</h3>
-                  <p>In a separate project, I created a digital twin of a UR5 robot using ROS1 Noetic. The real-world robot and its simulation in Gazebo were both equipped with 8 LiDAR sensors. The simulation ran in real-time, synchronized through RTDE (Real-Time Data Exchange). Through a series of tests, we evaluated and compared sensor readings in both the simulated and real-world environments.</p>
-                </div>
-                <img src="DD_sim.png" alt="Robot in simulation." class="full-width">
-          </div>
-      </div>
-      <div class="col-md-4">
-          <div class="card h-100 custom-card"> <!-- And here -->
-              <div class="card-body">
-                  <h3>
-                    <a href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=148808&lang=eng" target="_blank">
-                      <i class="fas fa-award"></i> Master thesis
-                    </a>
-                  </h3>
-                  <p>In my master's thesis, I integrated two cameras on an autonomous robot and developed an obstacle detection algorithm. The goal was optimal camera positioning and efficient environmental perception. After market analysis and literature review, a model was created to study camera placements. The Intel RealSense D435f stereo cameras captured the environment, and the architecture relied on ROS and Python. Open3d processed the data, with RViz for visualization. A GPU-based method sped up plane detection. The optimized obstacle detection algorithm was tested on the robot, assessing factors like distance deviation, detection resolution, and repeatability. Tests included different materials and dynamic obstacle detection. The study concludes by addressing challenges like glare, airborne obstacle detection, camera positioning, and potential enhancements.
-                  </div>
-                  <img src="product_AGV.png" alt="AMR of I.H.S. Systems (https://www.ihs.systems/en/product_category/amr_en/)." class="full-width">
-          </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 custom-card"> <!-- And here -->
-            <div class="card-body">
-                <h3>Obstacle avoidance</h3>
-                <p> The system adjusts its behavior based on the AMR's load. When loaded, the obstacle avoidance height is 2 meters, ensuring safe transit and collision avoidance. Unloaded, the threshold drops to 0.5 meters, allowing the AMR to navigate through tighter spaces. All obstacles are included in a costmap, crucial for the navigation system to compute the best path, ensuring smooth operation whether the AMR is loaded or not. </p>
-                </div>
-                <img src="smartgv_realsense.png" alt="Obstacle avoidance diagram." class="full-width">
-        </div>
-    </div>
-     <div class="col-md-4">
-    <div class="card h-100 custom-card">
-        <div class="card-body">
-            <h3>
-                <a href="https://github.com/Llavrih/hand_gesture" target="_blank">
-                    <i class="fas fa-code"></i> Hand Gesture Recognition Project
-                </a>
-            </h3>
-            <p>Control your mouse cursor using hand gestures with this Python script. It utilizes OpenCV, MediaPipe, and PyAutoGUI for gesture recognition and cursor control.</p>
-        </div>
-        <img src="hand_gesture_project_image.png" alt="Hand Gesture Recognition" class="full-width">
-    </div>
-</div>
+          <div class="card h-100 custom-card"> 
+  <div class="card-body">
+    <h3>Framework Migration of Robotic System from ROS1 to ROS2</h3>
+    <p>In March 2022, I embarked on a project to migrate a hobby robot's framework from ROS1 Melodic to ROS2 Humble. My
+      first step was to create a custom URDF file to accurately represent the robot's structure and dimensions.
+      Subsequently, I gained foundational knowledge in ROS1 and applied it to transition the system to ROS2. For motion
+      planning, I utilized MoveIt, and for visualization and goal-setting, I used RViz.</p>
   </div>
- 
-</section>
-</section>
+  <img src="ros_bot.jpg" alt="ROS bot)." class="full-width">
+  </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 custom-card"> 
+      <div class="card-body">
+        <h3>Digital twin in ROS1</h3>
+        <p>In a separate project, I created a digital twin of a UR5 robot using ROS1 Noetic. The real-world robot and
+          its simulation in Gazebo were both equipped with 8 LiDAR sensors. The simulation ran in real-time,
+          synchronized through RTDE (Real-Time Data Exchange). Through a series of tests, we evaluated and compared
+          sensor readings in both the simulated and real-world environments.</p>
+      </div>
+      <img src="DD_sim.png" alt="Robot in simulation." class="full-width">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 custom-card"> 
+      <div class="card-body">
+        <h3>
+          <a href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=148808&lang=eng" target="_blank">
+            <i class="fas fa-award"></i> Master thesis
+          </a>
+        </h3>
+        <p>In my master's thesis, I integrated two cameras on an autonomous robot and developed an obstacle detection
+          algorithm. The goal was optimal camera positioning and efficient environmental perception. After market
+          analysis and literature review, a model was created to study camera placements. The Intel RealSense D435f
+          stereo cameras captured the environment, and the architecture relied on ROS and Python. Open3d processed the
+          data, with RViz for visualization. A GPU-based method sped up plane detection. The optimized obstacle
+          detection algorithm was tested on the robot, assessing factors like distance deviation, detection resolution,
+          and repeatability. Tests included different materials and dynamic obstacle detection. The study concludes by
+          addressing challenges like glare, airborne obstacle detection, camera positioning, and potential enhancements.
+      </div>
+      <img src="product_AGV.png" alt="AMR of I.H.S. Systems (https://www.ihs.systems/en/product_category/amr_en/)."
+        class="full-width">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 custom-card"> 
+      <div class="card-body">
+        <h3>Obstacle avoidance</h3>
+        <p> The system adjusts its behavior based on the AMR's load. When loaded, the obstacle avoidance height is 2
+          meters, ensuring safe transit and collision avoidance. Unloaded, the threshold drops to 0.5 meters, allowing
+          the AMR to navigate through tighter spaces. All obstacles are included in a costmap, crucial for the
+          navigation system to compute the best path, ensuring smooth operation whether the AMR is loaded or not. </p>
+      </div>
+      <img src="smartgv_realsense.png" alt="Obstacle avoidance diagram." class="full-width">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100 custom-card">
+      <div class="card-body">
+        <h3>
+          <a href="https://github.com/Llavrih/hand_gesture" target="_blank">
+            <i class="fas fa-code"></i> Hand Gesture Recognition Project
+          </a>
+        </h3>
+        <p>Control your mouse cursor using hand gestures with this Python script. It utilizes OpenCV, MediaPipe, and
+          PyAutoGUI for gesture recognition and cursor control.</p>
+      </div>
+      <img src="hand_gesture_project_image.png" alt="Hand Gesture Recognition" class="full-width">
+    </div>
+  </div>
+  </div>
+
+-->
+
+  </section>
+  </section>
 
   <footer class="container my-5">
     <p>&copy; 2023 Lenart Lavrih. All rights reserved.</p>
@@ -313,18 +375,15 @@
 
   <script type="text/javascript">
     function playPause() {
-        var myVideo = document.getElementById("myVideo");
-        if (myVideo.paused) {
-            myVideo.play();
-        } else {
-            myVideo.pause();
-        }
+      var myVideo = document.getElementById("myVideo");
+      if (myVideo.paused) {
+        myVideo.play();
+      } else {
+        myVideo.pause();
+      }
     }
-</script>
-  
+  </script>
+
 </body>
+
 </html>
-
-
-
-
