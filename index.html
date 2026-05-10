@@ -15,7 +15,7 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
   <style>
@@ -24,10 +24,18 @@
       --bg-soft: #181b1f;
       --card: #1f2329;
       --card-light: #252a31;
+
       --text: #f4f4f5;
       --muted: #a1a1aa;
-      --accent: #8fb3ff;
-      --accent-strong: #5c8df6;
+
+      --accent: #D7B418;
+      --accent-strong: #D7B418;
+
+      --bauhaus-red: #D94A38;
+      --bauhaus-blue: #1F5DA8;
+      --bauhaus-black: #0B0B0B;
+      --bauhaus-white: #F4F1E8;
+
       --border: rgba(255, 255, 255, 0.08);
     }
 
@@ -43,10 +51,12 @@
       margin: 0;
       font-family: "Inter", sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(92, 141, 246, 0.15), transparent 35%),
+        radial-gradient(circle at 8% 12%, rgba(215, 180, 24, 0.12), transparent 22%),
+        radial-gradient(circle at 85% 75%, rgba(31, 93, 168, 0.12), transparent 24%),
         var(--bg);
       color: var(--text);
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
@@ -55,39 +65,54 @@
     }
 
     a:hover {
-      color: var(--text);
+      color: var(--bauhaus-white);
     }
 
     /* Navbar */
     .navbar {
-      background: rgba(17, 19, 21, 0.86) !important;
-      backdrop-filter: blur(12px);
+      background: rgba(17, 19, 21, 0.88) !important;
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
     .navbar-brand {
       color: var(--text) !important;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 0.55rem;
+      background: var(--bauhaus-red);
+      border-radius: 50%;
+      vertical-align: middle;
     }
 
     .nav-link {
       color: var(--muted) !important;
-      font-weight: 500;
+      font-weight: 700;
       margin-left: 0.4rem;
-      border-radius: 999px;
-      padding: 0.5rem 0.9rem !important;
+      border-radius: 0;
+      padding: 0.45rem 0.8rem !important;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
       transition: 0.2s ease;
     }
 
     .nav-link:hover {
-      color: var(--text) !important;
-      background: rgba(255, 255, 255, 0.08);
+      color: var(--bauhaus-black) !important;
+      background: var(--accent);
     }
 
     .social-link {
-      font-size: 1.35rem;
-      padding: 0.45rem 0.65rem !important;
+      font-size: 1.25rem;
+      letter-spacing: 0;
     }
 
     .navbar-toggler {
@@ -98,20 +123,33 @@
       filter: invert(1);
     }
 
-    /* Layout */
     section {
       scroll-margin-top: 100px;
     }
 
     .page-section {
-      padding: 4rem 0;
+      padding: 4.2rem 0;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: -0.05em;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.07em;
       margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .section-title span {
+      color: var(--accent);
     }
 
     .section-subtitle {
@@ -121,38 +159,55 @@
     }
 
     .custom-card {
-      background: linear-gradient(180deg, var(--card), var(--bg-soft));
+      position: relative;
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 28px;
+      border-radius: 0;
       color: var(--text);
       overflow: hidden;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+    }
+
+    .custom-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 100%;
+      background: var(--accent);
     }
 
     /* Hero */
     .hero {
-      padding: 6rem 0 4rem;
+      padding: 6rem 0 4.5rem;
     }
 
     .eyebrow {
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.18em;
       font-size: 0.8rem;
-      font-weight: 700;
+      font-weight: 900;
       margin-bottom: 1rem;
     }
 
     .hero-title {
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      line-height: 0.95;
-      font-weight: 800;
-      letter-spacing: -0.08em;
-      margin-bottom: 1.4rem;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: -0.1em;
+      margin-bottom: 1.6rem;
+      text-transform: uppercase;
+      max-width: 900px;
     }
 
-    .hero-title span {
+    .hero-title .yellow {
       color: var(--accent);
+    }
+
+    .hero-title .blue {
+      color: var(--bauhaus-blue);
     }
 
     .hero-text {
@@ -170,38 +225,43 @@
 
     .btn-main {
       background: var(--accent-strong);
-      color: white;
+      color: var(--bauhaus-black);
       border: none;
-      border-radius: 999px;
-      padding: 0.8rem 1.25rem;
-      font-weight: 700;
+      border-radius: 0;
+      padding: 0.85rem 1.25rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
     .btn-main:hover {
-      background: var(--accent);
-      color: #0d1117;
+      background: var(--bauhaus-red);
+      color: var(--bauhaus-white);
     }
 
     .btn-outline-custom {
       color: var(--text);
       border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 0.8rem 1.25rem;
-      font-weight: 700;
+      border-radius: 0;
+      padding: 0.85rem 1.25rem;
+      font-weight: 900;
       background: rgba(255, 255, 255, 0.03);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
     .btn-outline-custom:hover {
-      color: var(--text);
-      border-color: rgba(255, 255, 255, 0.22);
-      background: rgba(255, 255, 255, 0.08);
+      color: var(--bauhaus-black);
+      border-color: var(--bauhaus-white);
+      background: var(--bauhaus-white);
     }
 
     /* About */
     .video-box {
       height: 100%;
-      min-height: 360px;
+      min-height: 380px;
       background: #0c0d0f;
+      border-right: 1px solid var(--border);
     }
 
     .video-box video {
@@ -209,25 +269,36 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      filter: contrast(1.05) saturate(0.92);
     }
 
     .about-content {
-      padding: clamp(1.5rem, 4vw, 3rem);
+      padding: clamp(1.8rem, 4vw, 3.2rem);
     }
 
     .about-content h2 {
       font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: -0.05em;
+      font-weight: 900;
+      letter-spacing: -0.06em;
       margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .about-content h2::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 7px;
+      background: var(--bauhaus-blue);
+      margin-top: 0.8rem;
     }
 
     .about-content h3 {
-      font-size: 1rem;
+      font-size: 0.84rem;
       color: var(--accent);
-      font-weight: 700;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       margin-top: 2rem;
       margin-bottom: 0.7rem;
     }
@@ -239,19 +310,43 @@
 
     /* Skills */
     .skill-card {
+      position: relative;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 1.5rem;
+      border-radius: 0;
+      padding: 1.6rem;
       height: 100%;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 7px;
+      width: 100%;
+    }
+
+    .skills-row .col-md-4:nth-child(1) .skill-card::before {
+      background: var(--accent);
+    }
+
+    .skills-row .col-md-4:nth-child(2) .skill-card::before {
+      background: var(--bauhaus-blue);
+    }
+
+    .skills-row .col-md-4:nth-child(3) .skill-card::before {
+      background: var(--bauhaus-red);
     }
 
     .skill-card h3 {
       color: var(--text);
-      font-size: 1.1rem;
-      font-weight: 800;
+      font-size: 1.05rem;
+      font-weight: 900;
       margin-bottom: 1rem;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
     }
 
     .skill-list {
@@ -267,16 +362,16 @@
       background: var(--card-light);
       border: 1px solid var(--border);
       color: var(--text);
-      border-radius: 999px;
+      border-radius: 0;
       padding: 0.45rem 0.75rem;
       font-size: 0.92rem;
-      font-weight: 500;
+      font-weight: 700;
     }
 
     /* Work */
     .timeline {
       position: relative;
-      padding-left: 1.4rem;
+      padding-left: 1.6rem;
     }
 
     .timeline::before {
@@ -284,14 +379,14 @@
       position: absolute;
       top: 0.4rem;
       left: 0;
-      width: 2px;
+      width: 4px;
       height: calc(100% - 0.8rem);
-      background: var(--border);
+      background: var(--bauhaus-blue);
     }
 
     .timeline-item {
       position: relative;
-      padding-bottom: 2rem;
+      padding-bottom: 2.2rem;
     }
 
     .timeline-item:last-child {
@@ -302,26 +397,37 @@
       content: "";
       position: absolute;
       top: 0.35rem;
-      left: -1.75rem;
-      width: 11px;
-      height: 11px;
+      left: -2rem;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(143, 179, 255, 0.12);
+      border: 3px solid var(--bg-soft);
+    }
+
+    .timeline-item:nth-child(2)::before {
+      background: var(--bauhaus-red);
+    }
+
+    .timeline-item:nth-child(3)::before {
+      background: var(--bauhaus-blue);
     }
 
     .timeline-date {
       color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-size: 0.82rem;
+      font-weight: 900;
       margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .timeline-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
       margin-bottom: 0.25rem;
+      text-transform: uppercase;
     }
 
     .timeline-text {
@@ -329,22 +435,24 @@
       margin-bottom: 0;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
       text-align: center;
       padding: 2rem 0;
       margin-top: 2rem;
+      background: rgba(11, 11, 11, 0.28);
     }
 
     @media (max-width: 768px) {
       .hero {
-        padding-top: 4rem;
+        padding-top: 4.5rem;
       }
 
       .video-box {
         min-height: 280px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
       }
     }
   </style>
@@ -393,9 +501,12 @@
   <header class="hero">
     <div class="container">
       <p class="eyebrow">Robotics · Computer Vision · Automation</p>
+
       <h1 class="hero-title">
-        Lenart <span>Lavrih</span>
+        Lenart<br>
+        <span class="yellow">Lavrih</span><span class="blue">.</span>
       </h1>
+
       <p class="hero-text">
         Robotics specialist focused on ROS, computer vision, digital twin technology, PLC systems,
         ABB robots, and industrial robot-camera automation.
@@ -410,6 +521,9 @@
 
   <!-- About -->
   <section class="container page-section" id="info">
+    <p class="section-kicker">01 / Information</p>
+    <h2 class="section-title">About <span>Me</span></h2>
+
     <div class="card custom-card">
       <div class="row g-0">
         <div class="col-md-5">
@@ -423,7 +537,7 @@
 
         <div class="col-md-7">
           <div class="about-content">
-            <h2>About me</h2>
+            <h2>Robotics engineer with a hands-on mindset</h2>
             <p>
               I’m Lenart Lavrih, originally from Slovenia and currently based in Arnhem, Netherlands.
               My professional expertise lies in robotics, computer vision, programming, and digital twin technology.
@@ -450,13 +564,15 @@
 
   <!-- Skills -->
   <section class="container page-section" id="skills">
-    <h2 class="section-title">Skills</h2>
+    <p class="section-kicker">02 / Capabilities</p>
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+
     <p class="section-subtitle">
       A selection of technologies, tools, and environments I use in robotics, automation,
       computer vision, and industrial engineering.
     </p>
 
-    <div class="row g-4">
+    <div class="row g-4 skills-row">
       <div class="col-md-4">
         <div class="skill-card">
           <h3>Programming & Robotics</h3>
@@ -505,7 +621,9 @@
 
   <!-- Work History -->
   <section class="container page-section" id="work-history">
-    <h2 class="section-title">Work History</h2>
+    <p class="section-kicker">03 / Experience</p>
+    <h2 class="section-title">Work <span>History</span></h2>
+
     <p class="section-subtitle">
       Practical experience in robotics development, autonomous systems, computer vision,
       and industrial automation.
