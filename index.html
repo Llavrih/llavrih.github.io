@@ -2,108 +2,370 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenart Lavrih | Robotics Engineer</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha384-iBB6mRfM14Imx11Bje7SS02F9jkRbYWB6BHzgEocSJkNXbbpTj/9opejX5RVcdZP" crossorigin="anonymous">
-  <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
-</head>
-<style>
-  body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: rgb(37, 37, 37);
-    color: #F5F5F5;
-    /* This is a smoky white color */
-  }
 
-  h1,
-  h2,
-  h3 {
-    color: #d4d4d4;
-  }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  h1 {
-    font-weight: 700;
-    /* Bolder */
-  }
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  h2 {
-    font-weight: 600;
-    /* Middle */
-  }
+  <style>
+    :root {
+      --bg: #111315;
+      --bg-soft: #181b1f;
+      --card: #1f2329;
+      --card-light: #252a31;
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --accent: #8fb3ff;
+      --accent-strong: #5c8df6;
+      --border: rgba(255, 255, 255, 0.08);
+    }
 
-  h3 {
-    font-weight: 400;
-    /* Lighter */
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  #info img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-left: 1rem;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .full-width {
-    width: 100%;
-    height: auto;
-  }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(92, 141, 246, 0.15), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-  nav {
-    margin-bottom: 2rem;
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-  }
+    a:hover {
+      color: var(--text);
+    }
 
-  .navbar {
-    background-color: rgb(26, 26, 26) !important;
-  }
+    /* Navbar */
+    .navbar {
+      background: rgba(17, 19, 21, 0.86) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
 
-  .nav-item a {
-    color: #F5F5F5 !important;
-    /* Change #FF0000 to your desired font color */
-  }
+    .navbar-brand {
+      color: var(--text) !important;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
 
-  .navbar-brand {
-    color: #F5F5F5 !important;
-    /* Change #FF0000 to your desired font color */
-  }
+    .nav-link {
+      color: var(--muted) !important;
+      font-weight: 500;
+      margin-left: 0.4rem;
+      border-radius: 999px;
+      padding: 0.5rem 0.9rem !important;
+      transition: 0.2s ease;
+    }
 
-  .navbar-nav .nav-link:hover {
-    background-color: rgba(190, 190, 190, 0.329);
-    /* Change this value to your desired shade color */
-  }
+    .nav-link:hover {
+      color: var(--text) !important;
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-  .custom-card {
-    background-color: rgb(26, 26, 26);
-    /* Change to your desired color */
-    color: #F5F5F5;
-    /* Change to your desired color */
-  }
+    .social-link {
+      font-size: 1.35rem;
+      padding: 0.45rem 0.65rem !important;
+    }
 
-  footer {
-    background-color: rgb(26, 26, 26);
-    /* dark gray */
-    color: #F5F5F5;
-    text-align: center;
-    padding: 2rem 0;
-  }
-</style>
+    .navbar-toggler {
+      border-color: var(--border);
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    /* Layout */
+    section {
+      scroll-margin-top: 100px;
+    }
+
+    .page-section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 2rem;
+    }
+
+    .custom-card {
+      background: linear-gradient(180deg, var(--card), var(--bg-soft));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      color: var(--text);
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 6rem 0 4rem;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.08em;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn-main {
+      background: var(--accent-strong);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 0.8rem 1.25rem;
+      font-weight: 700;
+    }
+
+    .btn-main:hover {
+      background: var(--accent);
+      color: #0d1117;
+    }
+
+    .btn-outline-custom {
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.8rem 1.25rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-outline-custom:hover {
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* About */
+    .video-box {
+      height: 100%;
+      min-height: 360px;
+      background: #0c0d0f;
+    }
+
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-content {
+      padding: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .about-content h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .about-content h3 {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    /* Skills */
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    .skill-card h3 {
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      background: var(--card-light);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 0.45rem 0.75rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    /* Work */
+    .timeline {
+      position: relative;
+      padding-left: 1.4rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0.4rem;
+      left: 0;
+      width: 2px;
+      height: calc(100% - 0.8rem);
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 0.35rem;
+      left: -1.75rem;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(143, 179, 255, 0.12);
+    }
+
+    .timeline-date {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-text {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 4rem;
+      }
+
+      .video-box {
+        min-height: 280px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="#">Lenart Lavrih</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link" href="#info">Information</a>
+            <a class="nav-link" href="#info">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skills">Skills</a>
@@ -111,16 +373,15 @@
           <li class="nav-item">
             <a class="nav-link" href="#work-history">Work History</a>
           </li>
-        </ul>
-        <ul class="navbar-nav ms-auto"> <!-- ms-auto will move this ul to the right -->
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/Llavrih" target="_blank">
-              <i class="fab fa-github fa-2x"></i> <!-- Change fa-lg to fa-2x, fa-3x, etc., for larger sizes -->
+            <a class="nav-link social-link" href="https://github.com/Llavrih" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/lenart-lavrih-05b93019b" target="_blank">
-              <i class="fab fa-linkedin fa-2x"></i> <!-- Change fa-lg to fa-2x, fa-3x, etc., for larger sizes -->
+            <a class="nav-link social-link" href="https://www.linkedin.com/in/lenart-lavrih-05b93019b" target="_blank"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
             </a>
           </li>
         </ul>
@@ -128,254 +389,173 @@
     </div>
   </nav>
 
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Robotics · Computer Vision · Automation</p>
+      <h1 class="hero-title">
+        Lenart <span>Lavrih</span>
+      </h1>
+      <p class="hero-text">
+        Robotics specialist focused on ROS, computer vision, digital twin technology, PLC systems,
+        ABB robots, and industrial robot-camera automation.
+      </p>
 
+      <div class="hero-actions">
+        <a href="#work-history" class="btn btn-main">View experience</a>
+        <a href="mailto:lenart@lavrih.com" class="btn btn-outline-custom">Contact me</a>
+      </div>
+    </div>
+  </header>
 
-  <section class="container my-5" id="info">
+  <!-- About -->
+  <section class="container page-section" id="info">
     <div class="card custom-card">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <video id="myVideo" class="card-img" style="width: 100%; height: 100%; object-fit: contain;"
-            onclick="playPause();" controls muted loop>
-            <source src="my_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h2 class="card-title">About me</h2>
-            <p> I'm Lenart Lavrih, originally from Slovenia and currently residing in Arnhem, Netherlands. My
-              professional expertise lies in robotics, computer vision, programming, and digital twin technology.
-              Alongside my technical career, I have a strong passion for physical activities and enjoy engaging in
-              endurance sports (2024 I finished my first marathon and 2025 a full Ironman). These pursuits offer a
-              refreshing balance to my technologically oriented work.</p>
-            <h2>Education</h2>
-            <p>University of Ljubljana, Faculty of Electrical Engineering</p>
-            <p>Bachelor’s degree, 2018 - 2021</p>
-            <p>Master’s degree, 2021 - 2023</p>
-            <h2>Contact</h2>
-            <p><a href="mailto:lenart@lavrih.com" style="color: #F5F5F5;">lenart@lavrih.com</a></p>
-
+      <div class="row g-0">
+        <div class="col-md-5">
+          <div class="video-box">
+            <video id="myVideo" onclick="playPause();" controls muted loop>
+              <source src="my_video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="container my-5" id="skills">
-    <h2>Skills</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Programming</h3>
-        <ul>
-          <li>Python</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>C++</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="2" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>ROS1</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="5" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>ROS2</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="3" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>Matlab</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>TIA PORTAL</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="3" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>RobotStudio</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="3" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h3>Operating Systems</h3>
-        <ul>
-          <li>Linux</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>MacOS</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="3" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>Windows</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h3>Software & Tools</h3>
-        <ul>
-          <li>Visualisation (matplotlib, RViZ, OpenCV)</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>Simulation (Gazebo, Simulink)</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="4" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>Point Cloud processing (Open3D, numpy)</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>Git</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="5" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-          <li>Office</li>
-          <div class="progress mb-2">
-            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="5" aria-valuemin="0"
-              aria-valuemax="5"></div>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <div class="col-md-7">
+          <div class="about-content">
+            <h2>About me</h2>
+            <p>
+              I’m Lenart Lavrih, originally from Slovenia and currently based in Arnhem, Netherlands.
+              My professional expertise lies in robotics, computer vision, programming, and digital twin technology.
+            </p>
+            <p>
+              Alongside my technical career, I have a strong passion for endurance sports.
+              In 2024 I finished my first marathon, and in 2025 I completed a full Ironman.
+            </p>
 
-  <section class="container my-5" id="work-history">
-    <div class="card custom-card">
-      <div class="row no-gutters">
-        <div class="col-md-8">
-          <div class="card-body">
-            <h2 class="card-title">Work History</h2>
+            <h3>Education</h3>
+            <p><strong>University of Ljubljana, Faculty of Electrical Engineering</strong></p>
+            <p>Bachelor’s degree, 2018 – 2021</p>
+            <p>Master’s degree, 2021 – 2023</p>
 
-            <p><strong>RLS Merilna tehnika d. o. o.</strong></p>
-            <p>Developing ROS2 framework for custom robot.</p>
-            <p>Jun 2021 - Oct 2022 (Approx. 16 months)</p>
-
-            <p><strong>IHS Systems</strong></p>
-            <p>ROS developer for Autonomous robot.</p>
-            <p>Oct 2022 - Dec 2023 (Approx. 14 months)</p>
-
-            <p><strong>Royal Kaak</strong></p>
-            <p>Robotics Engineer.</p>
-            <p>Apr 2024 - current </p>
+            <h3>Contact</h3>
+            <p>
+              <a href="mailto:lenart@lavrih.com">lenart@lavrih.com</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!--
-<section class="container my-5" id="projects">
-  <h2>Projects</h2>
-  <div class="row">
+  <!-- Skills -->
+  <section class="container page-section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">
+      A selection of technologies, tools, and environments I use in robotics, automation,
+      computer vision, and industrial engineering.
+    </p>
+
+    <div class="row g-4">
       <div class="col-md-4">
-          <div class="card h-100 custom-card"> 
-  <div class="card-body">
-    <h3>Framework Migration of Robotic System from ROS1 to ROS2</h3>
-    <p>In March 2022, I embarked on a project to migrate a hobby robot's framework from ROS1 Melodic to ROS2 Humble. My
-      first step was to create a custom URDF file to accurately represent the robot's structure and dimensions.
-      Subsequently, I gained foundational knowledge in ROS1 and applied it to transition the system to ROS2. For motion
-      planning, I utilized MoveIt, and for visualization and goal-setting, I used RViz.</p>
-  </div>
-  <img src="ros_bot.jpg" alt="ROS bot)." class="full-width">
-  </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 custom-card"> 
-      <div class="card-body">
-        <h3>Digital twin in ROS1</h3>
-        <p>In a separate project, I created a digital twin of a UR5 robot using ROS1 Noetic. The real-world robot and
-          its simulation in Gazebo were both equipped with 8 LiDAR sensors. The simulation ran in real-time,
-          synchronized through RTDE (Real-Time Data Exchange). Through a series of tests, we evaluated and compared
-          sensor readings in both the simulated and real-world environments.</p>
+        <div class="skill-card">
+          <h3>Programming & Robotics</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>C++</li>
+            <li>ROS1</li>
+            <li>ROS2</li>
+            <li>Matlab</li>
+            <li>TIA Portal</li>
+            <li>RobotStudio</li>
+          </ul>
+        </div>
       </div>
-      <img src="DD_sim.png" alt="Robot in simulation." class="full-width">
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 custom-card"> 
-      <div class="card-body">
-        <h3>
-          <a href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=148808&lang=eng" target="_blank">
-            <i class="fas fa-award"></i> Master thesis
-          </a>
-        </h3>
-        <p>In my master's thesis, I integrated two cameras on an autonomous robot and developed an obstacle detection
-          algorithm. The goal was optimal camera positioning and efficient environmental perception. After market
-          analysis and literature review, a model was created to study camera placements. The Intel RealSense D435f
-          stereo cameras captured the environment, and the architecture relied on ROS and Python. Open3d processed the
-          data, with RViz for visualization. A GPU-based method sped up plane detection. The optimized obstacle
-          detection algorithm was tested on the robot, assessing factors like distance deviation, detection resolution,
-          and repeatability. Tests included different materials and dynamic obstacle detection. The study concludes by
-          addressing challenges like glare, airborne obstacle detection, camera positioning, and potential enhancements.
-      </div>
-      <img src="product_AGV.png" alt="AMR of I.H.S. Systems (https://www.ihs.systems/en/product_category/amr_en/)."
-        class="full-width">
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 custom-card"> 
-      <div class="card-body">
-        <h3>Obstacle avoidance</h3>
-        <p> The system adjusts its behavior based on the AMR's load. When loaded, the obstacle avoidance height is 2
-          meters, ensuring safe transit and collision avoidance. Unloaded, the threshold drops to 0.5 meters, allowing
-          the AMR to navigate through tighter spaces. All obstacles are included in a costmap, crucial for the
-          navigation system to compute the best path, ensuring smooth operation whether the AMR is loaded or not. </p>
-      </div>
-      <img src="smartgv_realsense.png" alt="Obstacle avoidance diagram." class="full-width">
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 custom-card">
-      <div class="card-body">
-        <h3>
-          <a href="https://github.com/Llavrih/hand_gesture" target="_blank">
-            <i class="fas fa-code"></i> Hand Gesture Recognition Project
-          </a>
-        </h3>
-        <p>Control your mouse cursor using hand gestures with this Python script. It utilizes OpenCV, MediaPipe, and
-          PyAutoGUI for gesture recognition and cursor control.</p>
-      </div>
-      <img src="hand_gesture_project_image.png" alt="Hand Gesture Recognition" class="full-width">
-    </div>
-  </div>
-  </div>
 
--->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <h3>Operating Systems</h3>
+          <ul class="skill-list">
+            <li>Linux</li>
+            <li>Windows</li>
+            <li>macOS</li>
+            <li>WSL</li>
+          </ul>
+        </div>
+      </div>
 
-  </section>
+      <div class="col-md-4">
+        <div class="skill-card">
+          <h3>Software & Tools</h3>
+          <ul class="skill-list">
+            <li>OpenCV</li>
+            <li>Open3D</li>
+            <li>NumPy</li>
+            <li>Gazebo</li>
+            <li>Simulink</li>
+            <li>RViz</li>
+            <li>Matplotlib</li>
+            <li>Git</li>
+            <li>Office</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer class="container my-5">
-    <p>&copy; 2023 Lenart Lavrih. All rights reserved.</p>
+  <!-- Work History -->
+  <section class="container page-section" id="work-history">
+    <h2 class="section-title">Work History</h2>
+    <p class="section-subtitle">
+      Practical experience in robotics development, autonomous systems, computer vision,
+      and industrial automation.
+    </p>
+
+    <div class="custom-card p-4 p-md-5">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <p class="timeline-date">Apr 2024 – present</p>
+          <h3 class="timeline-title">Royal Kaak</h3>
+          <p class="timeline-text">
+            Robotics engineer working on food-industry automation and robotic cells.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="timeline-date">Oct 2022 – Dec 2023</p>
+          <h3 class="timeline-title">IHS Systems</h3>
+          <p class="timeline-text">
+            ROS developer for an autonomous robot, with focus on computer vision and robotic perception.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="timeline-date">Jun 2021 – Oct 2022</p>
+          <h3 class="timeline-title">RLS Merilna tehnika d. o. o.</h3>
+          <p class="timeline-text">
+            Developed a ROS2 framework for a custom robot.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Lenart Lavrih. All rights reserved.</p>
+    </div>
   </footer>
 
-
-  <!-- Bootstrap JS (Optional) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script type="text/javascript">
+  <script>
     function playPause() {
-      var myVideo = document.getElementById("myVideo");
+      const myVideo = document.getElementById("myVideo");
+
       if (myVideo.paused) {
         myVideo.play();
       } else {
