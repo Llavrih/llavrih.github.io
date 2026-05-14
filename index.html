@@ -228,17 +228,19 @@
       overflow: hidden;
     }
 
-    .video-box {
+    .image-box {
       height: 100%;
       min-height: 360px;
       background: #0c0d0f;
     }
 
-    .video-box video {
+    .image-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      opacity: 0.75;
+      filter: grayscale(35%) contrast(0.95) brightness(0.85);
     }
 
     .content-box {
@@ -354,7 +356,7 @@
         padding-top: 4.5rem;
       }
 
-      .video-box {
+      .image-box {
         min-height: 260px;
       }
     }
@@ -421,11 +423,6 @@
         <span>Lavrih</span><span class="dot">.</span>
       </h1>
 
-      <p class="hero-text">
-        Robotics specialist focused on industrial automation, ROS, computer vision,
-        robot-camera systems, PLCs, and ABB robotic cells.
-      </p>
-
       <div class="hero-actions">
         <a href="#work-history" class="btn btn-main">View experience</a>
 
@@ -446,11 +443,8 @@
     <div class="card-simple">
       <div class="row g-0">
         <div class="col-md-5">
-          <div class="video-box">
-            <video id="myVideo" onclick="playPause();" controls muted loop>
-              <source src="my_video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <div class="image-box">
+            <img src="profile.jpeg" alt="Profile photo of Lenart Lavrih">
           </div>
         </div>
 
@@ -471,10 +465,6 @@
             <p>Bachelor’s degree, 2018 – 2021</p>
             <p>Master’s degree, 2021 – 2023</p>
 
-            <h3>Contact</h3>
-            <p>
-              <a href="mailto:lenart@lavrih.com">lenart@lavrih.com</a>
-            </p>
           </div>
         </div>
       </div>
@@ -485,10 +475,6 @@
   <section class="container page-section" id="skills">
     <p class="section-kicker">02 / Capabilities</p>
     <h2 class="section-title">Technical <span>Skills</span></h2>
-
-    <p class="section-subtitle">
-      Technologies and tools I use in robotics, automation, computer vision, and industrial engineering.
-    </p>
 
     <div class="row g-4">
       <div class="col-md-4">
@@ -523,11 +509,6 @@
   <section class="container page-section" id="work-history">
     <p class="section-kicker">03 / Experience</p>
     <h2 class="section-title">Work <span>History</span></h2>
-
-    <p class="section-subtitle">
-      Practical experience in robotics development, autonomous systems, computer vision,
-      and industrial automation.
-    </p>
 
     <div class="card-simple p-4 p-md-5">
       <div class="timeline">
@@ -568,18 +549,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    function playPause() {
-      const myVideo = document.getElementById("myVideo");
-
-      if (myVideo.paused) {
-        myVideo.play();
-      } else {
-        myVideo.pause();
-      }
-    }
-  </script>
 
 </body>
 
