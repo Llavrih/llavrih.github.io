@@ -157,7 +157,8 @@
     }
 
     .btn-main,
-    .btn-secondary-custom {
+    .btn-secondary-custom,
+    .cv-btn {
       border-radius: 0;
       padding: 0.85rem 1.2rem;
       font-weight: 900;
@@ -343,6 +344,39 @@
       margin-bottom: 0;
     }
 
+    .cv-download-group {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .cv-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .cv-btn:hover {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+
+    .cv-btn .flag {
+      font-size: 1.05rem;
+    }
+
+    .cv-btn.compact {
+      padding: 0.55rem 0.8rem;
+      font-size: 0.78rem;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       color: var(--muted);
@@ -389,10 +423,18 @@
             <a class="nav-link" href="#work-history">Work</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="CV_17_05_26.pdf" target="_blank" rel="noopener">
-              Download CV
-            </a>
+          <li class="nav-item ms-lg-2">
+            <div class="cv-download-group">
+              <a href="CV_SLO_12_06_26.pdf" download class="cv-btn compact" aria-label="Download Slovenian CV">
+                <span class="flag">🇸🇮</span>
+                <span>SLO CV</span>
+              </a>
+
+              <a href="CV_EN_12_06_26.pdf" download class="cv-btn compact" aria-label="Download English CV">
+                <span class="flag">🇬🇧</span>
+                <span>EN CV</span>
+              </a>
+            </div>
           </li>
 
           <li class="nav-item">
@@ -426,8 +468,14 @@
       <div class="hero-actions">
         <a href="#work-history" class="btn btn-main">View experience</a>
 
-        <a href="CV_17_05_26.pdf" class="btn btn-main" target="_blank" rel="noopener">
-          <i class="fa-solid fa-download me-2"></i>Download CV
+        <a href="CV_SLO_12_06_26.pdf" download class="cv-btn">
+          <span class="flag">🇸🇮</span>
+          <span>Download SLO CV</span>
+        </a>
+
+        <a href="CV_EN_12_06_26.pdf" download class="cv-btn">
+          <span class="flag">🇬🇧</span>
+          <span>Download EN CV</span>
         </a>
 
         <a href="mailto:lenart@lavrih.com" class="btn btn-secondary-custom">Contact me</a>
